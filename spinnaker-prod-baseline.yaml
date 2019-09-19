@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: s1p-hello-service-baseline
-        image: msathepivotal/s1p-hello-service:64414b
+        image: msathepivotal/s1p-hello-service:64414bd
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
