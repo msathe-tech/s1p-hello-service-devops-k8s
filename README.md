@@ -7,3 +7,4 @@ The files are separated based on target env - dev or prod.
 
 This file is a trigger for spinnaker CD pipeline.
 Anytime a change is done to ```spinnaker-dev.yaml``` the CD pipeline will trigger a deploy on K8s.
+
