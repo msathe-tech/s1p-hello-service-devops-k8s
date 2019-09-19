@@ -1,0 +1,11 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: s1p-hello-service
+spec:
+  ports:
+    - port: 80
+      targetPort: 8080
+  selector:
+    app: s1p-hello-service

@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: s1p-hello-service-baseline
+  name: s1p-hello-service-prod
   labels:
     app: s1p-hello-service
 spec:
   selector:
     matchLabels:
-      app: s1p-hello-service-baseline
+      app: s1p-hello-service-prod
   replicas: 1
   template:
     metadata:
       labels:
-        app: s1p-hello-service-baseline
+        app: s1p-hello-service-prod
     spec:
       containers:
-      - name: s1p-hello-service-baseline
-        image: msathepivotal/s1p-hello-service:64414b
+      - name: s1p-hello-service-prod
+        image: msathepivotal/s1p-hello-service
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
