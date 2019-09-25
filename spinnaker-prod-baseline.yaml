@@ -24,6 +24,8 @@ spec:
         env:
         - name: ACA_STAGE
           value: "baseline"
+        - name: GIT_SHA
+            value: "64414bd"
         - name: MY_POD_NAME
           valueFrom:
             fieldRef:
