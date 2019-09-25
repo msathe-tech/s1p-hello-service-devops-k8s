@@ -32,3 +32,20 @@ spec:
     targetPort: 8080
   selector:
     app: s1p-hello-service
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: s1p-hello-service
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    ingress.kubernetes.io/rewrite-target: /
+    ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  rules:
+  - host: hello-service.dev.spin.beirut.cf-app.com
+    http:
+      paths:
+      - backend:
+          serviceName: s1p-hello-service
+          servicePort: 80
