@@ -2,28 +2,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: s1p-hello-service-baseline
+  name: s1p-hello-service
   labels:
     app: s1p-hello-service
 spec:
   selector:
     matchLabels:
-      app: s1p-hello-service-baseline
-  replicas: 1
+      app: s1p-hello-service
+  replicas: 3
   template:
     metadata:
       labels:
-        app: s1p-hello-service-baseline
+        app: s1p-hello-service
     spec:
       containers:
-      - name: s1p-hello-service-baseline
-        image: msathepivotal/s1p-hello-service:BASELINE-SHA
+      - name: s1p-hello-service
+        image: msathepivotal/s1p-hello-service
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
         env:
         - name: ACA_STAGE
-          value: "baseline"
+          value: "prod"
+        - name: GIT_SHA
+            value: "GIT-SHA"
         - name: MY_POD_NAME
           valueFrom:
             fieldRef:
