@@ -20,4 +20,4 @@ spec:
         image: msathepivotal/s1p-hello-service:64414bd
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: 8080#
