@@ -24,6 +24,8 @@ spec:
         env:
         - name: ACA_STAGE
           value: "canary"
+        - name: GIT_SHA
+            value: "1837e21"
         - name: MY_POD_NAME
           valueFrom:
             fieldRef:
