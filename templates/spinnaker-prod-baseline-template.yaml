@@ -25,7 +25,7 @@ spec:
         - name: ACA_STAGE
           value: "baseline"
         - name: GIT_SHA
-            value: "BASELINE-SHA"
+          value: "BASELINE-SHA"
         - name: MY_POD_NAME
           valueFrom:
             fieldRef:
