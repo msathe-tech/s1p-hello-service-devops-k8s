@@ -25,7 +25,7 @@ spec:
         - name: ACA_STAGE
           value: "canary"
         - name: GIT_SHA
-          value: "1837e21"
+          value: "eac590a"
         - name: MY_POD_NAME
           valueFrom:
             fieldRef:
