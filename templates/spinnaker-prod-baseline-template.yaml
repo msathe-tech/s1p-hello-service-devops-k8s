@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: s1p-hello-service-baseline
-        image: msathepivotal/s1p-hello-service:BASELINE-SHA
+        image: msathepivotal/s1p-hello-service:BASELINE-TAG
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -26,6 +26,8 @@ spec:
           value: "baseline"
         - name: GIT_SHA
           value: "BASELINE-SHA"
+        - name: VERSION
+          value: "BASELINE-VERSION"
         - name: MY_POD_NAME
           valueFrom:
             fieldRef:
