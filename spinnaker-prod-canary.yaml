@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: s1p-hello-service-canary
-        image: msathepivotal/s1p-hello-service:0.0.1-SNAPSHOT-20191007.141443Z.8ab182f
+        image: msathepivotal/s1p-hello-service:0.0.1-SNAPSHOT-20191007.143721Z.80af3d9
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -25,9 +25,9 @@ spec:
         - name: ACA_STAGE
           value: "canary"
         - name: GIT_SHA
-          value: "8ab182f"
+          value: "80af3d9"
         - name: VERSION
-          value: "0.0.1-SNAPSHOT-20191007.141443Z.8ab182f"
+          value: "0.0.1-SNAPSHOT-20191007.143721Z.80af3d9"
         - name: MY_POD_NAME
           valueFrom:
             fieldRef:
