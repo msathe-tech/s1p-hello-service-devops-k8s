@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: s1p-hello-service-baseline
-        image: msathepivotal/s1p-hello-service:0.0.1-SNAPSHOT-20191007.214816Z.d119eed
+        image: msathepivotal/s1p-hello-service:0.0.1-SNAPSHOT-20191008.000419Z.efee6bf
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -25,9 +25,9 @@ spec:
         - name: ACA_STAGE
           value: "baseline"
         - name: GIT_SHA
-          value: "d119eed"
+          value: "efee6bf"
         - name: VERSION
-          value: "0.0.1-SNAPSHOT-20191007.214816Z.d119eed"
+          value: "0.0.1-SNAPSHOT-20191008.000419Z.efee6bf"
         - name: MY_POD_NAME
           valueFrom:
             fieldRef:
